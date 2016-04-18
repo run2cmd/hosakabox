@@ -16,7 +16,7 @@ if plugin_installed === true
 end
 
 # Configurable variables
-image = 'hosaka'
+image = 'https://s3.eu-central-1.amazonaws.com/runcmd/vagrant_images/hosaka.box'
 ip_address = '192.168.33.7'
 hostname = 'hosaka'
 vbname = 'Hosaka'
