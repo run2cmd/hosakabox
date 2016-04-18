@@ -12,13 +12,17 @@ but mostly develop software, scripts, solution for Linux OS.
 
 
 ## How to use
-Basically you need to download repository enter it and just run
+You might need to change some settings in `Vagrantfile` that describe your VM like
+- IP address
+- name
+- Mounted shares
+
+To start your VM just run
 ```
 vagrant up
 ```
 There is default image there that I personally manage, however you can change it for 
 your vagrant image.
-
 
 ## Copyright
 Piotr Bugała
