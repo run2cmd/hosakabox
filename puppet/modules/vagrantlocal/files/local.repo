@@ -1,0 +1,6 @@
+[localrepo]
+name=Local Repository
+baseurl=file:///var/lib/yum/repos/_local
+gpgcheck=0
+enabled=1
+priority=1

@@ -1,0 +1,13 @@
+{
+  "author": "Piotr.Bugala@IGT.com",
+  "dependencies": [],
+  "license": "",
+  "name": "VagrantLocal",
+  "operatingsystem_support": ["redhat"],
+  "project_page": "",
+  "requirements": [],
+  "source": "",
+  "summary": "",
+  "tags": [],
+  "version": "0.1.6"
+}
