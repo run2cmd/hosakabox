@@ -5,6 +5,7 @@
 class vagrantlocal {
   
   $packages = hiera('packages')
+  $gems = hiera('gems')
   $path = hiera('env::path')
   $editor = hiera('env::editor')
   $pager = hiera('env::pager')
@@ -19,6 +20,11 @@ class vagrantlocal {
 
   package {$packages:
     ensure => latest
+  }
+
+  package {$gems:
+    ensure   => latest,
+    provider => 'gem'
   }
 
   user {$username:

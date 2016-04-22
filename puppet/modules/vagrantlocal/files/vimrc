@@ -42,8 +42,9 @@ autocmd BufEnter * :syntax sync fromstart
 
 " Shortcuts
 nnoremap fd  diwi
-nnoremap tn :buffers<CR>:buffer<Space>
-map <F8>  <C-W>w
+nnoremap tb :CtrlPBuffer<CR>
+nnoremap tt  <C-W>w
+nnoremap tf :NERDTreeToggle<CR>
 
 " Session manager
 set sessionoptions-=blank
@@ -85,6 +86,7 @@ Plugin 'tpope/vim-speeddating'            "Manage date and time
 Plugin 'jceb/vim-orgmode'                 "Todo list
 Plugin 'mikelue/vim-maven-plugin'         "Maven plugin
 Plugin 'juneedahamed/svnj.vim'            "SVN plugin 
+Plugin 'ctrlpvim/ctrlp.vim'               "Buffer control
 if i_have_vundle == 0
   echo "Installing Vundles, please ignore key map error messages"
   echo ""
