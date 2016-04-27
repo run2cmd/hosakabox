@@ -24,6 +24,3 @@ chdir /c/code/
 screen -t 'CMD'
 screen -t 'NOTES' 
 screen -t 'VIM' vim
-screen -t 'PD-ENV' ssh root@puppetmaster
-screen -t 'PD-APL1' ssh -L 9989:10.108.8.190:443 ricie@10.164.172.199
-screen -t 'FIN'

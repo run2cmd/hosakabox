@@ -27,4 +27,11 @@ class vagrantlocal::localrepo {
     subscribe   => File['/etc/yum.repos.d/local.repo'],
     require     => Package['createrepo']
   }
+
+  #Add SVN repo
+  file {'/etc/yum.repos.d/wandisco-svn.repo':
+    ensure => file,
+    source => "puppet:///modules/${module_name}/wandisco-svn.repo"
+  }
+
 }

@@ -41,9 +41,10 @@ set statusline+=%L(%P)
 autocmd BufEnter * :syntax sync fromstart
 
 " Shortcuts
-nnoremap fd  diwi
+nnoremap fd diwi
 nnoremap tb :CtrlPBuffer<CR>
-nnoremap tt  <C-W>w
+nnoremap tn <C-W>w
+nnoremap tp <C-W>W
 nnoremap tf :NERDTreeToggle<CR>
 
 " Session manager
