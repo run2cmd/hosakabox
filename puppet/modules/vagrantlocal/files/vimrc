@@ -67,7 +67,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'             "Plugin manager
 Plugin 'scrooloose/nerdtree'              "File manager
-Plugin 'Xuyuanp/nerdtree-git-plugin'      "Nerd Treee git plugin
 Plugin 'rodjek/vim-puppet'                "Puppet support
 Plugin 'tpope/vim-fugitive'               "git support
 Plugin 'scrooloose/syntastic'             "Syntax check

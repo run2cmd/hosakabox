@@ -25,4 +25,4 @@ There is default image there that I personally manage, however you can change it
 your vagrant image.
 
 ## Copyright
-Piotr Bugała
+Piotr Bugała<Piotr.Bugala@gmail.com>
