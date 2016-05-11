@@ -17,6 +17,11 @@ You might need to change some settings in `Vagrantfile` that describe your VM li
 - name
 - Mounted shares
 
+You will need to get puppetlabs/stdlib module in order to get this work
+```
+git clone --branch 4.12.0 https://github.com/puppetlabs/puppetlabs-stdlib.git puppet/modules/stdlib
+```
+
 To start your VM just run
 ```
 vagrant up
