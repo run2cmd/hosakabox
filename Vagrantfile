@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+require 'yaml'
+
 # Check for missing plugins
 required_plugins = %w(vagrant-triggers)
 plugin_installed = false
@@ -15,14 +17,16 @@ if plugin_installed === true
   exec "vagrant #{ARGV.join' '}"
 end
 
+settings = YAML.load_file 'settings.yaml'
+
 # Configurable variables
-image = 'https://s3.eu-central-1.amazonaws.com/runcmd/vagrant_images/hosaka.box'
-ip_address = '192.168.33.7'
-hostname = 'hosaka'
-vbname = 'Hosaka'
-vbmem = '1024'
-vbcpu = '1'
-user = 'pbugala'
+image = settings['image']
+ip_address = settings['ip_address']
+hostname = settings['hostname']
+vbname = settings['vbname']
+vbmem = settings['vbmem']
+vbcpu = settings['vbcpu']
+user = settings['user']
 
 # You need to have access to polumaint03.mis.gtech.com to build Virtual Machine
 Vagrant.configure(2) do |config|
