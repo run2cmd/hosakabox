@@ -28,7 +28,7 @@ vbmem = settings['vbmem']
 vbcpu = settings['vbcpu']
 user = settings['user']
 
-# You need to have access to polumaint03.mis.gtech.com to build Virtual Machine
+# Main vagrant configuration
 Vagrant.configure(2) do |config|
 
   config.vm.box = image
