@@ -69,3 +69,7 @@ hi DiffAdd    cterm=bold ctermfg=LightGray ctermbg=Blue
 hi DiffDelete cterm=bold ctermfg=DarkGray ctermbg=Blue
 hi DiffChange cterm=bold ctermfg=LightGray ctermbg=DarkYellow
 hi DiffText   cterm=bold ctermfg=Red ctermbg=Yellow
+
+" Orgmode
+hi Folded ctermbg=NONE
+hi FoldColumn ctermbg=NONE

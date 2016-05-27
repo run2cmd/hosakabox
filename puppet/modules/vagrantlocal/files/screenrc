@@ -5,6 +5,7 @@ defscrollback 100000
 nethack on
 nonblock on
 altscreen on
+shell -${SHELL}
 # Display a caption string below, appearing like tabs and
 # displaying the window number and application name (by default).
 #caption always
