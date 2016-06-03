@@ -109,9 +109,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_puppet_puppetlint_args = '--no-80chars-check'
 " Below is to bypass puppet ERB template using ruby local variables issue
-let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
+"let g:syntastic_eruby_ruby_quiet_messages = {'regex': 'possibly useless use of a variable in void context'}
 
 " Disable folding for .md files
 let g:vim_markdown_folding_disabled = 1
