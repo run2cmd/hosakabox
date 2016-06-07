@@ -4,7 +4,7 @@
 require 'yaml'
 
 # Check for missing plugins
-required_plugins = %w(vagrant-triggers)
+required_plugins = %w(vagrant-triggers vagrant-bindfs)
 plugin_installed = false
 required_plugins.each do |plugin|
   unless Vagrant.has_plugin?(plugin)
@@ -43,13 +43,8 @@ Vagrant.configure(2) do |config|
     vb.cpus = vbcpu
   end
 
-  config.vm.synced_folder 'C:\code', '/code', 
-    owner: user,
-    mount_options: ["dmode=775,fmode=664"]
-
-  config.vm.synced_folder 'C:\pd', '/pd', 
-    owner: user,
-    mount_options: ["dmode=775,fmode=664"]
+  config.vm.synced_folder 'C:\code', '/code'
+  config.vm.synced_folder 'C:\pd', '/pd'
 
   # Puppet configuration
   config.vm.provision 'puppet' do |puppet|

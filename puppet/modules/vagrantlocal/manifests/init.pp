@@ -59,26 +59,19 @@ class vagrantlocal {
     require  => User[$username]
   }
 
-  class {'vagrantlocal::localrepo': }
-
-  vagrantlocal::puppetconf {'Puppet configuration for main':
-    conf        => $main_puppetfile,
-    module_path => $module_path,
-    hiera_file  => $hiera_file,
-    file_owner  => 'root'
-  }
-
   file {"/home/${username}/.puppet/":
     ensure => directory,
     owner  => $username,
     group  => $username,
     mode   => '0755'
   }
-  vagrantlocal::puppetconf {"Puppet configuration for ${username}":
-    conf        => $user_puppetfile,
-    module_path => $module_path,
-    hiera_file  => $hiera_file,
-    file_owner  => $username
+
+  file {$user_puppetfile:
+    ensure => file,
+    owner  => $username,
+    group  => $username,
+    mode   => '0755',
+    source => "puppet:///modules/${module_name}/puppet.conf"
   }
   
   exec { 'Update mlocate':
